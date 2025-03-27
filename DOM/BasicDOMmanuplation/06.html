@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count no of divs</title>
+</head>
+<body>
+   <div>
+   <div>div1</div>
+   <div>div2</div>
+   <div>div3</div>
+   <div>div4</div>
+</div> 
+</body>
+<script>
+    //Write a function that counts and displays the number of <div> elements on the page.
+    const nodes=document.querySelectorAll("div")
+    let count=0
+    function countDiv(){
+    nodes.forEach((element)=>{
+        console.log(element);
+        count++
+        
+    })
+    return count
+    }
+    console.log(countDiv());
+    
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="p" onclick={fun()} style="color:#8a2be2; height: 90px; width: 90px; background-color: beige;">ttrtggnfd</button>
+</body>
+<script>
+    const fun=()=>{
+        let x=document.getElementById("p");
+       
+        let color="#";
+        for (let i = 0; i < 6; i++) {
+        color += Math.floor(Math.random() * 16).toString(16);  // Generates a random hex color
+    }
+
+    x.style.backgroundColor = color;
+
+    }
+    //Create a button that changes its text to "Clicked!" when clicked.
+</script>
+</html>

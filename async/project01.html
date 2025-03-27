@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random bg color</title>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    function randomColor(){
+        let hex="0123456789ABCDEF"
+        let color="#"
+        for(let i=0;i<6;i++){
+            color+=hex[Math.floor(Math.random()*16)]
+        }
+        return color
+
+    }
+    let x;
+    document.getElementById("start").addEventListener('click',function(){
+        x=setInterval(function(){
+            document.body.style.backgroundColor=randomColor()
+
+        },2000)
+        for(let i=0;i<5;i++)console.log(i);
+        
+        
+    })
+    
+    
+    document.getElementById("stop").addEventListener('click',function(){
+        clearInterval(x)
+        
+    })
+    
+</script>
+</html>

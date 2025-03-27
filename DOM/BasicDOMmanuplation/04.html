@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write JavaScript to add a new <li> item to an existing <ul> list when a button is clicked.</title>
+</head>
+<body>
+    <ul id="existing list">
+        <li>sunday</li>
+        <li>Monday</li>
+        <li>Tuesday</li>
+    </ul>
+</body>
+<script>
+    //Write JavaScript to add a new <li> item to an existing <ul> list when a button is clicked.
+    const button=document.createElement("button")
+    button.innerText="add List item"
+    button.addEventListener("click", function(){
+        const li=document.createElement("li")
+        li.appendChild(document.createTextNode("hi shivam"))
+        const ul=document.getElementById("existing list")
+        ul.appendChild(li)
+})
+document.body.appendChild(button)
+
+
+</script>
+</html>
